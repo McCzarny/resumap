@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="res/style.css">
+    </head>
+<body>
+<div id='map'></div>
+<div id='features'>
+    <section id='welcome' class='active'>
+        <h3>Hello!</h3>
+        <p><img src="res/avatar.svg" height="300"><br/>Welcome to Maciek's resumap! You can see here a journey of my life.</p>
+    </section>
+    <section id='LP' class='active'>
+        <p class="timepoint">Sep 2005</p>
+        <h3>Art school in Supraśl</h3>
+        <p><img src="res/lsp.jpg"><br/>Because math was easy to learn I filled spare time with drawings. I enjoyed it, so I decide to pick an art high school.</p>
+    </section>
+    <section id='Biskupin'>
+        <p class="timepoint">Sep 2006</p>
+        <h3>Biskupin</h3>
+        <p><img src="res/biskupin.jpg"/><br/>During high school I visited a settlement in Biskupin and spent there 2 weeks as a woodcarver. Here I met my future wife.</p>
+    </section>
+    <section id='Malbork'>
+        <p class="timepoint">Sep 2008</p>
+        <h3>Malbork</h3>
+        <p><img src="res/malbork.jpg" width="350" /><br/><p style="font-size:xx-small;"> Source: <a href="http://visitmalbork.pl/262,Malbork-najwiekszy-zamek-gotycki-na-swiecie.html">visitmalbork.pl</a></p>
+        <br/>Next trip's destinations were Malbork. We spend a week here with cameras to take some photos. We could feel like in medieval ages because our accomodation was placed in one of the castle's towers.</p>
+    </section>
+    <section id='Hubert'>
+        <p class="timepoint">Apr 2010</p>
+        <h3>Saint Hubert's shrine for diploma in wood art</h3>
+        <p><img src="res/swh.jpg"/><br/><p style="font-size:xx-small;"> Source: <a href="http://suprasl.inecie.pl/photos">suprasl.inecie.pl</a></p>
+        <br/>My main specialization was carving. I finished </p>
+    </section>
+    <section id='Lodz'>
+        <p class="timepoint">May 2010</p>
+        <h3>Moving out to Łódź</h3>
+        <p>After high school I decided to move out to Łódź, where my girlfriend (currently wife) was studing in Art School.
+            <br><iframe src="https://giphy.com/embed/Nydo55HzhyGqI" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </p>
+    </section>
+    <section id='PL'>
+        <p class="timepoint">Oct 2010</p>
+        <h3>Lodz University of Technology</h3>
+        <p>I picked studies in IT field, precisely Data Analysis faculty. I learn a lot of math, programming basics, game development and a lot of math.<br><iframe src="https://giphy.com/embed/l46C6sdSa5DVSJnLG" width="360" height="179" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></p>
+    </section>
+    <section id='GameDev'>
+        <p class="timepoint">Jun 2013</p>
+        <h3>Game development contest</h3>
+        <p>During studies, together with cauple of friends, I took part in game development contest. It was great fun and oppurnity to learn how to work with a team on bigger project. Work was interesting, colleges determined, so We won. You can check demo on YouTube:
+            <br><iframe width="320" height="240" src="https://www.youtube.com/embed/6ylWmawddHg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+    </section>
+    <section id='Accenture'>
+        <p class="timepoint">Jun 2013</p>
+        <h3>First work as developer</h3>
+        <p>Have fun!<br><br><iframe src="https://giphy.com/embed/rAm0u2k17rM3e" width="360" height="252" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <br>I started my programming career as Accenture intern and continued as programmer. It's escalated quickly because I was working with a big team on a large telecom billing system. I learn a lot and decided that I will pick C++ as my main programming language.
+    </p>
+    </section>
+    <section id='Fujitsu'>
+        <p class="timepoint">Feb 2015</p>
+        <h3>New work, new challenges</h3>
+        <iframe src="https://giphy.com/embed/lJNoBCvQYp7nq" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <br><p>After I gain some knowledge and skill in C++ I decided to move on and applied to Fujitu. Here I started from maintaining setup apps, but soon I received my own project. It was multiplatform app written in C++ with Qt libs. I had the opportunity to lead a small team and learn many interesting technologies.</p>
+    </section>
+    <section id='Qt'>
+        <p class="timepoint">Oct 2017</p>
+        <h3>Qt's contributors summit in Berlin</h3>
+        <p><img src="res/qt.png"/><br/><p style="font-size:xx-small;"> Source: <a href="http://blog.qt.io/blog/2017/10/24/qt-world-summit-2017-recordings/">blog.qt.io</a><br></p>
+        <p>After appling fix to Qt library I decided to take part in Qt contributors summit 2018 in Berlin. I was able to learn a lot abot Qt and generally C++. Additionally I had small talk with Lars Knoll.</p>
+    </section>
+    <section id='Ending'>
+        <p class="timepoint">Now</p>
+        <h3>That's it.</h3>
+        <p>Now I'm continuing my programmer's journey. Still C++ is my favorite programming language, but I'm using many other technologies to develop my skills.</p>
+        <p style="font-size: 50%">Inspired by <a href="https://dev.to/eqmapbox/how-to-build-a-custom-resume-map-resumap-w-mapbox---3pin">Erin's Quinn post</a>.</p> 
+    </section>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWNjemFybnkiLCJhIjoiY2pncGdzaGxuM2YwNTJ3cGppMWEzb2p5bCJ9.ShKuGdQbE48eHqDpkSzSZg';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/outdoors-v10',
+        bearing: 7.20,
+        center: [20.364940, 51.666374],
+        zoom: 5.86,
+        speed: 0.8,
+        pitch: 35.00
+});
+var chapters = {
+    'welcome': {
+        bearing: 7.20,
+        center: [20.364940, 51.666374],
+        zoom: 5.86,
+        speed: 0.8,
+        pitch: 35.00
+    },
+    'LP': { //LP
+        bearing: -43.20,
+        center: [23.342864, 53.207309],
+        zoom: 17.60,
+        pitch: 54.00
+    },
+    'Biskupin': { //Biskupin
+        center: [17.745678, 52.786173],
+        bearing: 37.60,
+        zoom: 16.89,
+        speed: 0.6,
+        pitch: 59.00
+    },
+    'Malbork': { //Malbork
+        bearing: 76.00,
+        center: [19.028303, 54.039768],
+        zoom: 15.77,
+        speed: 0.6,
+        pitch: 47.50
+    },
+    'Hubert': {  //Hubert
+        center: [23.346204, 53.219487],
+        bearing: -68.00,
+        zoom: 17.60,
+        speed: 0.6,
+        pitch: 57.00
+    },
+    'Lodz': { //Lodz
+        bearing: 0,
+        center: [19.460236, 51.735724],
+        zoom: 10.61,
+        pitch: 0,
+        speed: 0.6
+    },
+    'PL': { //PL
+        bearing: 0.00,
+        center: [19.455680, 51.746260],
+        zoom: 15,
+        pitch: 38.00,
+        speed: 0.6
+    },
+    'GameDev': { //Game Dev
+        bearing: 10.40,
+        center: [19.454037, 51.747287],
+        zoom: 17.77,
+        pitch: 42.00,
+        speed: 0.6
+    },
+    'Accenture': { //Accenture
+        bearing: -0,
+        center: [19.456733, 51.753940],
+        zoom: 16.84,
+        speed: 0.8,
+        pitch: 45.00
+    },
+    'Fujitsu': { //Fujitsu
+        bearing: 180,
+        center: [19.455783, 51.753042],
+        zoom: 16.84,
+        speed: 0.8,
+        pitch: 45.00
+    },
+    'Qt': { //Qt
+        bearing: -0,
+        center: [13.417142, 52.520538],
+        zoom: 15.68,
+        speed: 0.8,
+        pitch: 24.00
+    },
+    'Ending': {
+        bearing: -0,
+        center: [21.563888, 51.315174],
+        zoom: 4,
+        speed: 0.8,
+        pitch: 24.00
+    },
+};
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+var activeChapterName = '';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+    map.flyTo(chapters[chapterName]);
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+    activeChapterName = chapterName;
+}
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+</script>
+</body>
+</html>
